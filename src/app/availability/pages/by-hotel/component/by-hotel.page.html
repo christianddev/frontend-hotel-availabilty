@@ -1,14 +1,21 @@
 <section class="form-container">
   <form [formGroup]="form" (ngSubmit)="onSubmit()">
-    <app-shared-select [items]="hotels" [control]="form.controls['hotelName']">
+    <app-shared-select
+      class="form-select"
+      [items]="hotels"
+      [control]="form.controls['hotelName']">
     </app-shared-select>
     <app-shared-input-date
+      class="form-input-date"
       label="check In"
       [control]="form.controls['checkIn']"></app-shared-input-date>
     <app-shared-input-date
+      class="form-input-date"
       label="check Out"
       [control]="form.controls['checkOut']"></app-shared-input-date>
-    <app-shared-button-submit [disabled]="form.invalid">
+    <app-shared-button-submit
+      class="form-button-submit"
+      [disabled]="form.invalid">
     </app-shared-button-submit>
   </form>
 </section>

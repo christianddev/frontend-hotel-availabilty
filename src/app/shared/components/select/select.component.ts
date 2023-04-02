@@ -25,7 +25,8 @@ export class SelectComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    this.control.setValue(this.items[0]);
+    const defaultValue = this.items[0] ?? [];
+    this.control.setValue(defaultValue);
   }
 
   get formControl(): FormControl {

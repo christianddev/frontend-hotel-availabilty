@@ -1,0 +1,57 @@
+@max-width-mobile: 721px;
+@min-width-desktop: 1024px;
+
+.header-container .p-tabmenu,
+.form-container {
+  max-width: @max-width-mobile;
+  margin: auto;
+}
+.form-container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+
+  form {
+    width: inherit;
+    .form-select .p-autocomplete,
+    .form-input-date .p-calendar,
+    .form-button-submit {
+      width: 100%;
+      padding: 1rem;
+    }
+    .form-button-submit {
+      display: block;
+      .p-button {
+        width: 100%;
+        display: block;
+        text-transform: capitalize;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: @min-width-desktop) {
+  .header-container .p-tabmenu,
+  .form-container {
+    max-width: @min-width-desktop;
+  }
+  .form-container {
+    background-color: transparent;
+
+    form {
+      display: flex;
+      justify-content: space-between;
+      .form-select .p-autocomplete,
+      .form-input-date .p-calendar,
+      .form-button-submit {
+        width: auto;
+        padding: 0.25rem;
+      }
+      .form-button-submit {
+        display: inline-flex;
+      }
+    }
+  }
+}
