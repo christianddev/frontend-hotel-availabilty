@@ -5,6 +5,7 @@ import {
   Validators,
   FormControl,
 } from '@angular/forms';
+import { SelectItem } from 'src/app/shared/components/select/interfaces/select.interfaces';
 
 @Component({
   templateUrl: './by-hotel.page.html',
@@ -17,7 +18,20 @@ export class ByHotelPage {
     checkOut: [new Date(), [Validators.required]],
   });
 
-  hotels: string[] = ['hotel-a', 'hotel-b', 'hotel-c'];
+  hotels: SelectItem[] = [
+    {
+      key: 'AA',
+      value: 'AA',
+    },
+    {
+      key: 'BB',
+      value: 'BB',
+    },
+    {
+      key: 'CC',
+      value: 'CC',
+    },
+  ];
   constructor(private fb: FormBuilder) {}
 
   onSubmit() {
