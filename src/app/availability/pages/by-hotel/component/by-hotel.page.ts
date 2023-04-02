@@ -5,7 +5,7 @@ import {
   Validators,
   FormControl,
 } from '@angular/forms';
-import { SelectItem } from 'src/app/shared/components/select/interfaces/select.interfaces';
+import { SelectItem } from 'src/app/shared/modules/select/interfaces/select.interfaces';
 
 @Component({
   templateUrl: './by-hotel.page.html',
