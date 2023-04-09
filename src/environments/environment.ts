@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  apiHotelsUrl: 'localhost:8000/api/v1/hotels',
 };
 
 /*
