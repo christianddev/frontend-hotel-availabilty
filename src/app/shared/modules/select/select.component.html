@@ -1,0 +1,8 @@
+<p-autoComplete
+  pInputText
+  id="p-autoCompleteAA"
+  [formControl]="formControl"
+  [suggestions]="filteredItems"
+  (completeMethod)="search($event)"
+  [field]="field"
+  [dropdown]="true"></p-autoComplete>
