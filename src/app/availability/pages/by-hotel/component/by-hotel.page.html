@@ -3,7 +3,8 @@
     <app-shared-select
       class="form-select"
       [items]="hotels"
-      [control]="form.controls['hotelName']">
+      field="name"
+      [control]="form.controls['hotel']">
     </app-shared-select>
     <app-shared-input-date
       class="form-input-date"
@@ -14,8 +15,48 @@
       label="check Out"
       [control]="form.controls['checkOut']"></app-shared-input-date>
     <app-shared-button-submit
+      [loading]="isLoading"
       class="form-button-submit"
       [disabled]="form.invalid">
     </app-shared-button-submit>
   </form>
 </section>
+
+<section *ngIf="getKeys(rooms)?.length; else noRooms" class="result-container">
+  <app-shared-panel
+    class="result-item"
+    *ngFor="let roomCode of getKeys(rooms)"
+    [header]="rooms[roomCode].name">
+    <div *ngFor="let rateCode of getKeys(rooms[roomCode].rates)">
+      <h4>{{ rooms[roomCode].rates[rateCode].name }}</h4>
+      <div
+        *ngFor="let date of getKeys(rooms[roomCode].rates[rateCode].breakdown)">
+        <p class="breakdown-container">
+          <span>{{ date }}</span>
+          <span>
+            Price
+            <strong>
+              {{
+                rooms[roomCode].rates[rateCode].breakdown[date].price | currency
+              }}
+            </strong>
+          </span>
+          <span>
+            Availability
+            <strong>
+              {{ rooms[roomCode].rates[rateCode].breakdown[date].availability }}
+            </strong>
+          </span>
+        </p>
+        <hr />
+      </div>
+    </div>
+  </app-shared-panel>
+</section>
+
+<ng-template #noRooms>
+  <div class="no-result-container">
+    Choose a hotel, indicate the dates and cross your fingers and wait, confirm
+    if the stars have aligned to check the results!
+  </div>
+</ng-template>

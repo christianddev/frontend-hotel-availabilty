@@ -12,5 +12,8 @@ export class ButtonSubmitComponent {
   @Input()
   disabled: boolean = true;
 
+  @Input()
+  loading: boolean = true;
+
   constructor() {}
 }

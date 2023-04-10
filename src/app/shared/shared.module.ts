@@ -7,6 +7,7 @@ import {
   HeaderModule,
   InputDateModule,
   SelectModule,
+  PanelModule,
 } from './modules';
 
 @NgModule({
@@ -19,6 +20,12 @@ import {
     ReactiveFormsModule,
     SelectModule,
   ],
-  exports: [ButtonSubmitModule, HeaderModule, InputDateModule, SelectModule],
+  exports: [
+    ButtonSubmitModule,
+    HeaderModule,
+    InputDateModule,
+    SelectModule,
+    PanelModule,
+  ],
 })
 export class SharedModule {}
