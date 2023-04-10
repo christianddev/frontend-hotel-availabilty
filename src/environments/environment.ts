@@ -5,6 +5,7 @@
 export const environment = {
   production: false,
   apiHotelsUrl: '/api/v1/hotels',
+  apiAvailabilityUrl: '/api/v1/availability',
 };
 
 /*
