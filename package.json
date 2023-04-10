@@ -10,7 +10,11 @@
     "ng:add": "ng add @angular-eslint/schematics",
     "lint": "ng lint",
     "lint:fix": "ng lint --fix",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "build:href": "ng build --base-href ./",
+    "delete:docs": "del docs",
+    "copy:dist": "copyfiles dist/bases/* ./docs -f",
+    "build:dist": "yarn delete:docs && yarn build:href && yarn copy:dist"
   },
   "private": true,
   "dependencies": {
@@ -45,6 +49,8 @@
     "@types/node": "^12.11.1",
     "@typescript-eslint/eslint-plugin": "4.28.2",
     "@typescript-eslint/parser": "4.28.2",
+    "copyfiles": "^2.4.1",
+    "del-cli": "^5.0.0",
     "eslint": "^7.26.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
