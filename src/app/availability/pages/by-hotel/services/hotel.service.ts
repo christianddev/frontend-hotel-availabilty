@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
-import { environment } from 'src/environments/environment';
-import { ApiResponse } from 'src/app/availability/interfaces/api-response.interface';
+import { environment } from '../../../../../environments/environment';
+import { ApiResponse } from '../../../interfaces/api-response.interface';
 import { Hotel, HotelsResponse } from '../interfaces/hotel.interface';
 import { SelectItem } from 'src/app/shared/modules';
 
