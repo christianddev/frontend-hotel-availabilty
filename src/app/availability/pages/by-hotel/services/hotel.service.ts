@@ -11,8 +11,7 @@ import { SelectItem } from 'src/app/shared/modules';
   providedIn: 'root',
 })
 export class HotelService {
-  // private apiHotelsUrl = environment.apiHotelsUrl;
-  private apiHotelsUrl = '/api/v1/hotels';
+  private apiHotelsUrl = environment.apiHotelsUrl;
 
   constructor(private httpClient: HttpClient) {}
 
