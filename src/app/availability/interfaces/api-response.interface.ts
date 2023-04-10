@@ -2,7 +2,7 @@ export interface ApiResponse<T> {
   data?: {
     [key: string]: T;
   };
-  error: ApiErrorResponse;
+  error?: ApiErrorResponse;
 }
 
 export interface ApiErrorResponse {
