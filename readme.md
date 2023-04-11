@@ -91,4 +91,5 @@ The main idea is to have the functionality of the application grouped by modules
 
 ## 👾 known bugs
 
+- In `*.html` files, the use of del linter & prettier can generate some conflicts, for these cases they must be solved manually, the automatic format does not work in these cases.
 - Error handling should be improved, some unexpected errors can lead to query inconsistencies.
