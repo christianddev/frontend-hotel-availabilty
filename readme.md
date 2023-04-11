@@ -1,27 +1,94 @@
-# App
+<div align="center">
+  <h1>Frontend Hotel Availability</h1>
+  <strong>⚡️ this application allows you to check the availability of rooms based on the information of this [API](https://github.com/christianddev/api-hotel-availability).. ⚡️</strong>
+</div>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.17.
+### 📝 Technologies used:
 
-## Development server
+- Angular 12
+- primeNG
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## 🎇 First steps
 
-## Code scaffolding
+- Before running the application, you must configure the environment variables and the [API](https://github.com/christianddev/api-hotel-availability).
+- Environment variables are already configured in the environment [directory](./src/environments/)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### 🚀 Quick Start
 
-## Build
+- Clone this repo:
+  ```bash
+  git clone https://github.com/christianddev/frontend-hotel-availabilty
+  ```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+#### 💻 Quick start of development:
 
-## Running unit tests
+- From the root of the project, run `yarn` or `yarn install`.
+- After installing the dependencies,
+  - into another terminal: `yarn dev`, check the `yarn dev` script in case you have problems making requests locally .
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+#### 📝 Short Description.
 
-## Running end-to-end tests
+The current version of the frontend only allows queries, to make modifications to the api, you must use a client as postman or access the DB administration.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### 🛠️ Understanding folder structure (Main files)
 
-## Further help
+The main idea is to have the functionality of the application grouped by modules, for example, in the avalaibility directory it contains the modules|components associated with room availability, in the same way, the shared directory has the modules | components that can be reused, for example buttons or inputs:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```bash
+    📦src
+    ┣ 📂app
+    ┃ ┣ 📂availability
+    ┃ ┃ ┣ 📂interfaces
+    ┃ ┃ ┃ ┣ 📜api-response.interface.ts
+    ┃ ┃ ┃ ┗ 📜index.ts
+    ┃ ┃ ┣ 📂pages
+    ┃ ┃ ┃ ┗ 📂by-hotel
+    ┃ ┃ ┃ ┃ ┣ 📂component
+    ┃ ┃ ┃ ┃ ┃ ┗ 📜by-hotel.page.ts
+    ┃ ┃ ┃ ┃ ┣ 📂interfaces
+    ┃ ┃ ┃ ┃ ┣ 📂services
+    ┃ ┃ ┃ ┃ ┗ 📜by-hotel.module.ts
+    ┃ ┃ ┣ 📜availability-routing.module.ts
+    ┃ ┃ ┗ 📜availability.module.ts
+    ┃ ┣ 📂shared
+    ┃ ┃ ┣ 📂modules
+    ┃ ┃ ┃ ┣ 📂button-submit
+    ┃ ┃ ┃ ┃ ┗ 📜button-submit.module.ts
+    ┃ ┃ ┃ ┣ 📂header
+    ┃ ┃ ┃ ┃ ┗ 📜header.module.ts
+    ┃ ┃ ┃ ┣ 📂input-date
+    ┃ ┃ ┃ ┃ ┗ 📜input-date.module.ts
+    ┃ ┃ ┃ ┣ 📂panel
+    ┃ ┃ ┃ ┃ ┗ 📜panel.module.ts
+    ┃ ┃ ┃ ┣ 📂select
+    ┃ ┃ ┃ ┃ ┗ 📜select.module.ts
+    ┃ ┃ ┣ 📂utils
+    ┃ ┃ ┃ ┗ 📜index.ts
+    ┃ ┃ ┣ 📜index.ts
+    ┃ ┃ ┗ 📜shared.module.ts
+    ┃ ┗ 📜app.module.ts
+    ┣ 📂assets
+    ┣ 📂environments
+    ┃ ┣ 📜environment.prod.ts
+    ┃ ┗ 📜environment.ts
+
+```
+
+### Others
+
+##### API response
+
+- [Google JSON Style Guide](https://google.github.io/styleguide/jsoncstyleguide.xml)
+
+### 🛠 Next improvements
+
+- Apply unit and functional tests.
+- Apply a translation service.
+- Check version of Angular universal
+- Implement back office to manage the entities of each hotel
+- Eliminate the use of primeNG and instead use native components
+- Control if it is the first search and change the message depending on the search result
+
+## 👾 known bugs
+
+- Error handling should be improved, some unexpected errors can lead to query inconsistencies.
